@@ -1,0 +1,35 @@
+{
+  "name": "ts-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "start": "nodemon",
+    "start:prod": "npm run build && node build/index.js",
+    "build": "rimraf ./build && tsc",
+    "lint": "eslint '*/**/*.{ts}' --quiet --fix",
+    "prettier": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusz-bielak/ts-router.git"
+  },
+  "author": "Mateusz Bielak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateusz-bielak/ts-router/issues"
+  },
+  "homepage": "https://github.com/mateusz-bielak/ts-router#readme"
+}
