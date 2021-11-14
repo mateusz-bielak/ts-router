@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.ts",
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^5.3.1",
     "@typescript-eslint/parser": "^5.3.1",
+    "babel-jest": "^27.3.1",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.3.1",
     "nodemon": "^2.0.15",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   },
@@ -19,8 +25,13 @@
     "start": "nodemon",
     "start:prod": "npm run build && node build/index.js",
     "build": "rimraf ./build && tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint '*/**/*.{ts}' --quiet --fix",
     "prettier": "prettier --write ."
+  },
+  "engines": {
+    "node": "17"
   },
   "repository": {
     "type": "git",
